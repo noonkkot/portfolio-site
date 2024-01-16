@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+#AboutProjectWrap {
+  font-family: 'Pretendard-Regular', sans-serif;
+  width: 100%;
+}
+
+#AboutProjectWrap .AboutProjectList {
+  padding: 0 5rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#AboutProjectWrap .AboutProjectList h2 {
+  font-family: 'Pretendard-Regular', sans-serif;
+  font-weight: 600;
+}
+
+#AboutProjectWrap .AboutProjectList ul {
+  width: 80%;
+}
+
+#AboutProjectWrap .AboutProjectList ul li {
+  padding: 0.75rem 0;
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+#AboutProjectWrap .AboutProjectList ul li:hover {
+  background-color: #ddd;
+}
+
+#AboutProjectWrap .AboutProject {
+  width: 100%;
+  padding: 1.5rem 0;
+  height: 50vh;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#AboutProjectWrap .AboutProject:nth-of-type(2n) {
+  background-color: #eee;
+}
+
+#AboutProjectWrap .AboutProject .AboutProject_thumbnail {
+  width: 50%;
+  flex: 1;
+  display: flex;
+}
+#AboutProjectWrap .AboutProject .AboutProject_thumbnail .ap_thumbnail_frame {
+  width: 500px;
+  max-width: 500px;
+  height: 250px;
+  max-height: 250px;
+  box-sizing: border-box;
+}
+#AboutProjectWrap .AboutProject .AboutProject_thumbnail .ap_thumbnail_frame img {
+  width: inherit;
+  object-position: center;
+  border: 1px solid #ddd;
+  border-radius: 1.5rem;
+  box-shadow: 4px 4px 16px #eee;
+}
+#AboutProjectWrap .AboutProject .AboutProject_description {
+  display: flex;
+  flex: 1;
+  margin-right: 14rem;
+  justify-content: left;
+  text-align: left;
+  font-family: 'Pretendard-Regular', sans-serif;
+}
+#AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame {}
+#AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame .ap_description_frame_txt {}
+#AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame .ap_description_frame_txt h2 span {
+  display: block;
+  font-size: 1rem;
+  color: #666;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+}
+#AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame .ap_description_frame_txt h2 {
+  font-family: 'Pretendard-Regular', sans-serif;
+  font-weight: 600;
+  text-align: left;
+  padding-bottom: 20px;
+}
+#AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame .ap_description_frame_txt p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  word-break: keep-all;
+}
