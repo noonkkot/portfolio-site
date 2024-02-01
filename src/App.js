@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Link, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Routes} from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import Contact from './components/Contact';
