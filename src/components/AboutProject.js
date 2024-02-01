@@ -35,30 +35,43 @@ function AboutProject() {
     { 
       id: 6, 
       thumbnailSrc: `${process.env.PUBLIC_URL}/images/project6.png`, 
-      description: '틱택토 게임',
-      detail: 'HTML, CSS, Javascript로 구현한 틱택토 게임으로 플레이어 이름을 입력한 후 게임을 진행할 수 있고, 게임 종료시 한 쪽이 승리한 경우, 둘이 비긴 경우 모두 구현했고 버튼을 눌러 게임을 다시 시작 수 있다.'  },
+      description: '좋아하는 장소',
+      detail: 'Mango DB, Express, Node.js, API와 React.js를 활용해 만든 웹 어플리케이션이다. 인증을 마친 사용자가 구글맵에 장소를 저장할 수 있도록 한다.' },
   ];
 
   const projectsList = [
     {
+      id: 1,
       title: "PROJECT #1 포트폴리오 사이트",
     },
     {
+      id: 2,
       title: "PROJECT #2 KMDb 한국영화 데이터베이스 검색 사이트",
     },
     {
+      id: 3,
       title: "PROJECT #3 북 어드밴트 캘린더",
     },
     {
+      id: 4,
       title: "PROJECT #4 바늘이야기 리뉴얼",
     },
     {
+      id: 5,
       title: "PROJECT #5 TEAM PROJECT 애플스토어 리뉴얼",
     },
     {
-      title: "PROJECT #6 틱택토 게임",
+      id: 6,
+      title: "PROJECT #6 좋아하는 장소",
     },
   ];
+
+  function scrollToProject(projectId) {
+    const projectElement = document.getElementById(`project_${projectId}`);
+    if (projectElement) {
+      projectElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
   return (
     <>
@@ -66,13 +79,13 @@ function AboutProject() {
           <div className="AboutProjectList">
             <h2>프로젝트 리스트</h2>
           {projectsList.map((project, index) => (
-            <ul key={index}>
+            <ul key={index} onClick={() => scrollToProject(project.id)}>
               <li>{project.title}</li>
             </ul>
           ))}
           </div>
         {projectsData.map((project) => (
-          <div className="AboutProject" key={project.id}>
+          <div className="AboutProject" key={project.id} id={`project_${project.id}`}>
             <div className="AboutProject_thumbnail">
               <div className="ap_thumbnail_frame">
                 <img src={project.thumbnailSrc} alt="프로젝트 이미지" />

@@ -1,83 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 /* Contact.css */
 #contact {
   width: 100%;
   height: 100vh;
   margin-top: 52px;
+  padding: 0 5rem;
   display: flex;
-  gap: 5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: 'IBM Plex Sans KR', sans-serif;
   box-sizing: border-box;
-  background-image: url(../../public/images/index_gray.png); 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
 }
 
-h2 {
-  font-family: 'Permanent Marker', cursive;
-  font-size: 3rem;
-  color: black;
+.envelopeBtn {
+  display: flex;
+  width: 90px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  background: #333;
+  border-radius: 100%;
+  color: #fff;
+  border: none;
+  cursor: pointer; /* 커서를 변경하여 버튼임을 나타냄 */
+  transition: transform 0.3s ease; /* hover 효과를 위한 transition 추가 */
+}
+
+.envelopeBtn:hover {
+  transform: scale(1.1); /* hover 시 크기를 확대하는 효과 */
+  animation: shake 0.5s infinite; /* hover 시 흔들리는 애니메이션 추가 */
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.memoticon {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  bottom: 39px;
+  background-image: url("../../public/images/memoticon.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.popup {
+  width: 50%;
+  padding: 2rem;
+  border: 1px solid #666;
 }
 
 #contactForm {
-  width: 25%;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 15px;
-  border: none;
-  padding: 3rem;
-  box-shadow: 4px 4px 20px #909090;
-}
-
-#contactForm div {
   width: 100%;
 }
 
-form div label {
+#contactForm .formInputData label {
   display: block;
   padding-bottom: 1rem;
 }
 
-form div label span {
+#contactForm .formInputData label span {
   display: block;
   padding-bottom: 0.5rem;
 }
 
-form div label input {
+#contactForm .formInputData label input {
   height: 20px;
 }
 
-form div label input,
-form div label textarea {
+#contactForm .formInputData label input,
+#contactForm .formInputData label textarea {
   width: 100%;
   font-family: 'IBM Plex Sans KR', sans-serif; 
 }
 
-form div label textarea {
-  height: 200px;
+#contactForm .formInputData label textarea {
+  max-height: 200px;
 }
 
-form div label textarea.text-limit-exceeded {
+#contactForm .formInputData label textarea.text-limit-exceeded {
   color: red;
 }
 
-form div label p {
+#contactForm .formInputData label p {
   font-size: 0.75rem;
   text-align: right;
 }
 
-form div button {
+#contactForm .formInputData button {
   font-family: 'IBM Plex Sans KR', sans-serif; 
   background-color: #333;
   border: 1px solid #333;
@@ -86,6 +124,6 @@ form div button {
   padding: 5px 15px;
 }
 
-form div button:hover {
+#contactForm .formInputData button:hover {
   cursor: pointer;
 }

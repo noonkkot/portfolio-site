@@ -1,5 +1,7 @@
-import React from 'react';
-import { BrowserRouter as Router, Link, Routes } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Link, Routes, useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import Contact from './components/Contact';
 import About from './components/About';
 import AboutProject from './components/AboutProject';
@@ -12,9 +14,9 @@ function Header() {
       <h1><Link to="/">NOONKKOT</Link></h1>
       <nav id="nav">
         <ul>
-          <li><Link to="/about">ABOUT</Link></li>
-          <li><Link to="/project">PROJECT</Link></li>
-          <li><Link to="/contact">CONTACT</Link></li>
+          <li><Link to="/about">KOR</Link></li>
+          <span></span>
+          <li><Link to="/about">ENG</Link></li>
         </ul>
       </nav>
     </header>
@@ -33,20 +35,54 @@ function Footer() {
   );
 }
 
+function ScrollToTopButton() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
+  }, []);
+
+  return (
+    <button
+      className={`scroll-to-top-button ${isVisible ? 'show' : 'hide'}`}
+      onClick={scrollToTop}
+      title="Go to top"
+    >
+      <FontAwesomeIcon icon={faArrowUp} />
+    </button>
+  );
+}
+
 function App() {
   return (
     <Router>
-        <Header />
-        <About />
-        <AboutProject />
-        <Contact />
-        <Routes>
-          
-          
-          
-          
-        </Routes>
-        <Footer />
+      <Header />
+      <About />
+      <AboutProject />
+      <Contact />
+      <Routes>
+        {/* Your routes */}
+      </Routes>
+      <Footer />
+      <ScrollToTopButton />
     </Router>
   );
 }

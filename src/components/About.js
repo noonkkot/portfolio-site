@@ -1,10 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../App.css';
-
-
-gsap.registerPlugin(ScrollTrigger);
+import './About.css';
 
 function About() {
   const trainingList = ["한 번에 끝내는 프론트엔드 개발자 과정"];
@@ -26,26 +22,20 @@ function About() {
 
     // 첫 번째 질문에 대한 애니메이션 추가
     gsap.from(lineElements, {
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    ease: 'power4.out',
-    stagger: 0.5,
-    scrollTrigger: {
-      trigger: textElement,
-      start: 'top 50vh',
-      end: 'bottom',
-      scrub: false,
-    },
-  });
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: 'power4.out',
+      stagger: 0.7,
+    });
   }, []);
   
   return (
     <article id="about">
       <div className="aboutFirstPage"> 
-      <p ref={textRef} className="gsapText">
-        Q. 프론트엔드 개발자로서의 목표는?<br/> A. 읽기 쉬운 코드로 원활하고<br /> 빠른 웹 서핑이 가능하도록<br /> 유저의 편의성을 우선으로하는<br /> 웹 개발을 목표로 합니다.<br /> 업데이트는 필수죠! <br />리팩토링을 통해 코드를 개선하고 <br />더 나은 사용자 경험을 <br />지향합니다.
-      </p>
+        <p ref={textRef} className="gsapText">
+          Q. 프론트엔드 개발자로서의 목표는?<br/> A. 읽기 쉬운 코드로<br /> 유연한 협업이 가능하도록! <br /> 사용자의 편의성을 고려해<br /> 직관적인 웹 경험이 가능하도록!<br /> 웹 표준과 웹 접근성을 충족하는 웹 개발을 목표로 합니다.<br /> 업데이트는 필수죠! <br />리팩토링을 통해 코드를 개선하고 <br />더 나은 사용자 경험을 <br />지향합니다.
+        </p>
       </div>
       <div className="aboutSecondPage">
         <div className="about-imgWrap">
