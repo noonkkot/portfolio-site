@@ -18,15 +18,17 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 #AboutProjectWrap .AboutProjectList h2 {
   font-family: 'Pretendard-Regular', sans-serif;
   font-weight: 600;
+  margin-bottom: 2rem;
 }
 
 #AboutProjectWrap .AboutProjectList ul {
-  width: 80%;
+  width: 60%;
 }
 
 #AboutProjectWrap .AboutProjectList ul li {
@@ -41,12 +43,13 @@
 #AboutProjectWrap .AboutProjectList ul li:hover {
   background-color: #ddd;
   font-weight: 600;
+  cursor: pointer;
 }
 
 #AboutProjectWrap .AboutProject {
   width: 100%;
-  padding: 1.5rem 0;
   height: 50vh;
+  padding: 2rem 5rem;
   display: flex;
   gap: 50px;
   align-items: center;
@@ -58,15 +61,18 @@
 }
 
 #AboutProjectWrap .AboutProject .AboutProject_thumbnail {
-  width: 50%;
+  max-width: 40%;
   flex: 1;
   display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 #AboutProjectWrap .AboutProject .AboutProject_thumbnail .ap_thumbnail_frame {
-  width: 500px;
-  max-width: 500px;
-  height: 250px;
-  max-height: 250px;
+  width: 100%;
+  height: 100%;
+  margin: 4rem 2rem;
+  display: flex;
+  align-items: center;
   box-sizing: border-box;
 }
 #AboutProjectWrap .AboutProject .AboutProject_thumbnail .ap_thumbnail_frame img {
@@ -77,13 +83,17 @@
   box-shadow: 4px 4px 16px #eee;
 }
 #AboutProjectWrap .AboutProject .AboutProject_description {
+  max-width: 50%;
   display: flex;
   flex: 1;
-  margin-right: 14rem;
   justify-content: left;
   text-align: left;
   font-family: 'Pretendard-Regular', sans-serif;
+  box-sizing: border-box;
 }
+
+
+
 #AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame {}
 #AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame .ap_description_frame_txt {}
 #AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame .ap_description_frame_txt h2 span {
@@ -99,8 +109,71 @@
   text-align: left;
   padding-bottom: 20px;
 }
+
+#AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame .ap_description_frame_txt h2 .pageLink {
+  margin-left: 4px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 50%;
+  border: none;
+  width: 28px;
+  height: 28px;
+  font-size: 0.75rem;
+}
+
+#AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame .ap_description_frame_txt h2 .pageLink:hover {
+  cursor: pointer;
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 #AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame .ap_description_frame_txt p {
   font-size: 1.25rem;
   line-height: 1.8;
   word-break: keep-all;
+}
+
+@media (max-width: 599px) {
+  #AboutProjectWrap .AboutProject {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  #AboutProjectWrap .AboutProject .AboutProject_thumbnail,
+  #AboutProjectWrap .AboutProject .AboutProject_description {
+    max-width: 80%;
+  }
+
+  #AboutProjectWrap .AboutProject .AboutProject_thumbnail .ap_thumbnail_frame {
+    margin: 0rem;
+  }
+  #AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame .ap_description_frame_txt h2 {
+    font-size: 1.25rem;
+  }
+  #AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame .ap_description_frame_txt h2 .pageLink {
+    width: 25px;
+    height: 25px;
+    font-size: 0.7125rem;
+  }
+  #AboutProjectWrap .AboutProject .AboutProject_description .ap_description_frame .ap_description_frame_txt p {
+    font-size: 1rem;
+  }
 }

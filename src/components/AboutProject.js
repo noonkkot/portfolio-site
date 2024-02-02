@@ -1,5 +1,7 @@
 // Project.js
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import './AboutProject.css'; // Swiper 커스텀 스타일 파일 import
 
 function AboutProject() {
@@ -9,34 +11,43 @@ function AboutProject() {
       id: 1, 
       thumbnailSrc: `${process.env.PUBLIC_URL}/images/project1.png`, 
       description: '포트폴리오 사이트',
-      detail: 'React.js 라우트 기능을 활용하여 새로고침할 경우 업데이트 되는 부분만 빠르게 불러올 수 있도록 구성한 사이트이다.'
+      detail: 'React.js 라우트 기능을 활용하여 새로고침할 경우 업데이트 되는 부분만 빠르게 불러올 수 있도록 구성한 사이트이다.',
+      pageLink: 'https://super-capybara-0cf166.netlify.app',
     },
     { 
       id: 2, 
       thumbnailSrc: `${process.env.PUBLIC_URL}/images/project2.png`, 
       description: 'KMDb 한국영화 데이터베이스 검색 사이트' ,
-      detail: 'OPEN API를 활용한 사이트로 전체검색, 영화제목 검색, 감독 검색, 배우 검색이 가능하다. 검색결과를 클릭 할 경우 포스터 이미지가 팝업창으로 뜬다.'
-    },
+      detail: 'OPEN API를 활용한 사이트로 전체검색, 영화제목 검색, 감독 검색, 배우 검색이 가능하다. 검색결과를 클릭 할 경우 포스터 이미지가 팝업창으로 뜬다.',
+      pageLink: 'https://verdant-torte-dbfc1d.netlify.app',},
     { 
       id: 3, 
       thumbnailSrc: `${process.env.PUBLIC_URL}/images/project3.png`, 
       description: '북 어드밴트 캘린더',
-      detail: 'HTML, CSS, Javascript로 구현한 어드벤트 캘린더로 숫자가 적힌 카드를 클릭할 경우 책에서 발췌한 문장이 팝업창으로 뜬다. 아직 지나지 않은 날짜의 숫자를 클릭할 경우 기한까지 남은 날짜가 뜬다.' },
+      detail: 'HTML, CSS, Javascript로 구현한 어드벤트 캘린더로 숫자가 적힌 카드를 클릭할 경우 책에서 발췌한 문장이 팝업창으로 뜬다. 아직 지나지 않은 날짜의 숫자를 클릭할 경우 기한까지 남은 날짜가 뜬다.',
+      pageLink: 'https://noonkkot.github.io/book-advent-calendar/',
+    },
     { 
       id: 4, 
       thumbnailSrc: `${process.env.PUBLIC_URL}/images/project4.png`, 
       description: '바늘이야기 리뉴얼',
-      detail: '리액트로 만들어지지 않은 사이트를 리액트로 구현한 클론 사이트로 Swiper.js를 활용하여 슬라이드 기능을 구현하였다.' },
+      detail: '리액트로 만들어지지 않은 사이트를 리액트로 구현한 클론 사이트로 Swiper.js를 활용하여 슬라이드 기능을 구현하였다.',
+      pageLink: 'https://playful-tulumba-cc37c6.netlify.app',
+    },
     { 
       id: 5, 
       thumbnailSrc: `${process.env.PUBLIC_URL}/images/project5.png`, 
       description: 'TEAM PROJECT 애플스토어 리뉴얼',
-      detail: '4명으로 구성된 팀원들이 각자 구현 영역을 정하고 코딩한 애플스토어 리뉴얼 사이트이다. HTML, CSS, Javascript로 구현했으며 Swiper.js를 사용했다. 각 페이지마나 스크롤 이벤트가 걸려있으며 웹, 태블릿, 모바일 버전으로 제작한 반응형 사이트이다.'  },
-    { 
+      detail: '4명으로 구성된 팀원들이 각자 구현 영역을 정하고 코딩한 애플스토어 리뉴얼 사이트이다. HTML, CSS, Javascript로 구현했으며 Swiper.js를 사용했다. 각 페이지마나 스크롤 이벤트가 걸려있으며 웹, 태블릿, 모바일 버전으로 제작한 반응형 사이트이다.',
+      pageLink: 'https://noonkkot.github.io/team-project-complete/',
+    },
+    {
       id: 6, 
       thumbnailSrc: `${process.env.PUBLIC_URL}/images/project6.png`, 
       description: '좋아하는 장소',
-      detail: 'Mango DB, Express, Node.js, API와 React.js를 활용해 만든 웹 어플리케이션이다. 인증을 마친 사용자가 구글맵에 장소를 저장할 수 있도록 한다.' },
+      detail: 'Mango DB, Express, Node.js, API와 React.js를 활용해 만든 웹 어플리케이션이다. 인증을 마친 사용자가 구글맵에 장소를 저장할 수 있도록 한다.',
+      pageLink: '',
+    }
   ];
 
   const projectsList = [
@@ -94,7 +105,15 @@ function AboutProject() {
             <div className="AboutProject_description">
               <div className="ap_description_frame">
                 <div className="ap_description_frame_txt">
-                  <h2><span>Project detail</span>{project.description}</h2>
+                  <h2>
+                    <span>Project detail</span>
+                      {project.description}
+                    <button className="pageLink">
+                      <a href={project.pageLink} target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faHouse} />
+                      </a>
+                    </button>
+                  </h2>
                   <p>{project.detail}</p>
                 </div>
               </div>

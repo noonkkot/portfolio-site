@@ -42,7 +42,7 @@ function About() {
           <img className="about-img" src={process.env.PUBLIC_URL + 'images/about.jpg'} alt="어바웃 이미지" />
         </div>
         <div className="about-txt">
-          <h2>INTRODUCE MYSELF</h2>
+          <h2>💡</h2>
           <div>
             <p>
               안녕하세요!<br />

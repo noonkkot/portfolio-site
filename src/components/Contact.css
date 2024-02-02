@@ -72,6 +72,13 @@
   background-size: cover;
 }
 
+@media (max-width: 599px) {
+  .memoticon {
+    bottom: 61px;
+  }
+}
+
+
 .popup {
   width: 50%;
   padding: 2rem;
