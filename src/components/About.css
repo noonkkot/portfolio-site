@@ -9,7 +9,7 @@
 }
 /* about */
 #about { 
-  font-family: 'Bricolage Grotesque', 'IBM Plex Sans KR', sans-serif; 
+  font-family: 'Pretendard-Regular', sans-serif; 
   width: 100%;
   margin-top: 50px;
   box-sizing: border-box;
@@ -17,19 +17,23 @@
 
 #about .aboutFirstPage {
   width: 100%;
+  padding: 4rem 5rem;
+  box-sizing: border-box;
 }
 
 #about .aboutFirstPage p {
-  padding: 4rem 5rem;
   color: #ddd;
   font-weight: 900;
   font-size: 5rem;
   line-height: 1.6;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 899px) {
+  #about .aboutFirstPage {
+    padding: 2rem;
+  }
   #about .aboutFirstPage p {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -46,7 +50,7 @@
   background-color: #eee;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 899px) {
   #about .aboutSecondPage {
     flex-direction: column;
     gap: 1.5rem;
@@ -58,10 +62,9 @@
 }
 
 #about .aboutSecondPage .about-imgWrap {
-  width: 50%; 
-  max-width: 50%;
-  display: flex;
-  justify-content: right;
+  width: 45%; 
+  max-width: 45%;
+  text-align: right;
   aspect-ratio: inherit;
 }
 
@@ -90,7 +93,7 @@
   padding-bottom: 1rem;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 899px) {
   #about .aboutSecondPage .about-imgWrap {
     width: 250px;
     max-width: 250px;

@@ -75,6 +75,13 @@
 
 @media (max-width: 599px) {
   .memoticon {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 498px) {
+  .memoticon {
     width: 250px;
     height: 250px;
     bottom: 61px;

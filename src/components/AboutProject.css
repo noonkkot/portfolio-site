@@ -150,7 +150,7 @@
   word-break: keep-all;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 899px) {
   #AboutProjectWrap .AboutProjectList {
     padding: 0 1rem;
   }
