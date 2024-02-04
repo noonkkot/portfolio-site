@@ -3,10 +3,6 @@ import gsap from 'gsap';
 import './About.css';
 
 function About() {
-  const trainingList = ["한 번에 끝내는 프론트엔드 개발자 과정"];
-  const certificationList = ["웹디자인 기능사"];
-  const techStackList = ["HTML", "CSS", "Javascript", "Vue.js", "React.js"];
-
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -65,39 +61,6 @@ function About() {
           </div>
         </div>
       </div>
-      
-      {/* <div className="aboutThirdPage">
-        <div className="aboutSection">
-          <ul>
-            <li>이런 훈련을 받았어요
-              <ul>
-                {trainingList.map((training, index) => (
-                  <li key={index}>{training}</li>
-                ))}
-              </ul>
-            </li>
-          </ul>
-          <ul>
-            <li>이런 자격증이 있어요.
-              <ul>
-                {certificationList.map((certification, index) => (
-                  <li key={index}>{certification}</li>
-                ))}
-              </ul>
-            </li>
-          </ul>
-          <ul>
-            <li>이런 기술 스택이 있어요.
-              <ul>
-                {techStackList.map((tech, index) => (
-                  <li key={index}>{tech}</li>
-                ))}
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <p>프로젝트로 이렇게 활용했어요.<span>Scroll down</span></p>
-      </div> */}
     </article>
   );
 }
