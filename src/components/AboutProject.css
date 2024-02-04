@@ -151,11 +151,18 @@
 }
 
 @media (max-width: 599px) {
+  #AboutProjectWrap .AboutProjectList {
+    padding: 0 1rem;
+  }
+  #AboutProjectWrap .AboutProjectList ul {
+    width: 70%;
+  }
   #AboutProjectWrap .AboutProject {
     flex-direction: column;
     height: auto;
     padding: 2rem 1rem;
   }
+
 
   #AboutProjectWrap .AboutProject .AboutProject_thumbnail,
   #AboutProjectWrap .AboutProject .AboutProject_description {
