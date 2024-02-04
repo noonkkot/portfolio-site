@@ -66,7 +66,7 @@ function About() {
         </div>
       </div>
       
-      <div className="aboutThirdPage">
+      {/* <div className="aboutThirdPage">
         <div className="aboutSection">
           <ul>
             <li>이런 훈련을 받았어요
@@ -97,7 +97,7 @@ function About() {
           </ul>
         </div>
         <p>프로젝트로 이렇게 활용했어요.<span>Scroll down</span></p>
-      </div>
+      </div> */}
     </article>
   );
 }
