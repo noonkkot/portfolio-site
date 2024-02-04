@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @font-face {
   font-family: 'LINESeedKR-Bd';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
-
 
 /* Contact.css */
 #contact {
@@ -73,22 +71,6 @@
   background-size: cover;
 }
 
-@media (max-width: 599px) {
-  .memoticon {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-@media (max-width: 498px) {
-  .memoticon {
-    width: 250px;
-    height: 250px;
-    bottom: 61px;
-  }
-}
-
-
 .popup {
   width: 50%;
   padding: 2rem;
@@ -144,4 +126,19 @@
 
 #contactForm .formInputData button:hover {
   cursor: pointer;
+}
+
+@media (max-width: 599px) {
+  .memoticon {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 498px) {
+  .memoticon {
+    width: 250px;
+    height: 250px;
+    bottom: 61px;
+  }
 }
