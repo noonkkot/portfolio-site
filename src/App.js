@@ -14,9 +14,9 @@ function Header() {
       <h1><Link to="/">NOONKKOT</Link></h1>
       <nav id="nav">
         <ul>
-          <li><Link to="/about">KOR</Link></li>
+          <li><Link to="/">KOR</Link></li>
           <span></span>
-          <li><Link to="/about">ENG</Link></li>
+          <li><Link to="/eng">ENG</Link></li>
         </ul>
       </nav>
     </header>
